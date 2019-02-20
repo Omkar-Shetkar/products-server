@@ -23,4 +23,12 @@ public class ProductsService {
 		return products;
 	}
 
+	public void addProduct(Product product) {
+		this.products.add(product);
+	}
+
+	public void removeProduct(String name) {
+		this.products.removeIf(p -> p.getName().equalsIgnoreCase(name));
+	}
+
 }
